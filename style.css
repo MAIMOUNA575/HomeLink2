@@ -2122,6 +2122,9 @@ body h2 {
 }
 
 
+
+
+
 /* icone cachés */
 
 @media screen and (max-width: 768px) {
@@ -2131,7 +2134,21 @@ body h2 {
   .gra li{
     display: none;
   }
+  .menu{
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: #222;
+    width: 200px;
 
+    flex-direction: column;
+    padding: 20px;
+
+    display: none;
+  }
+  .menu.active{
+    display: flex;
+  }
 }
 
 
