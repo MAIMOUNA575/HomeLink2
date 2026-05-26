@@ -25,14 +25,25 @@
 
 
 // Sélectionner les éléments
-const burger = document.getElementById("#burger");
-const menu = document.getElementById("#menu");
+// const burger = document.getElementById("#burger");
+// const menu = document.getElementById("#menu");
 
-// Ajouter un événement au clic
+// // Ajouter un événement au clic
+// burger.addEventListener("click", () => {
+
+//   // Ajouter ou retirer la classe active
+//   menu.classList.toggle("active");
+//   burger.classList.toggle("open");
+
+// });
+// Sélectionner les éléments
+const burger = document.getElementById("burger");
+const menu = document.getElementById("menu");
+
+// événement click
 burger.addEventListener("click", () => {
 
-  // Ajouter ou retirer la classe active
+  // ouvrir / fermer menu
   menu.classList.toggle("active");
-  burger.classList.toggle("open");
 
 });
