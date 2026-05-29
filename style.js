@@ -36,7 +36,13 @@
 //   burger.classList.toggle("open");
 
 // });
+
+
+
+
+
 // Sélectionner les éléments
+
 const burger = document.getElementById("burger");
 const menu = document.getElementById("menu");
 
@@ -45,5 +51,19 @@ burger.addEventListener("click", () => {
 
   // ouvrir / fermer menu
   menu.classList.toggle("active");
+  if(burger == active){
+    burger.style.display = 'flex'
+  }else{
+    burger.style.display = 'none'
+  }
+});
 
+
+croix.addEventListener("click", () => {
+  
+  if(menu == active){
+    menu.style.display = 'block'
+  }else{
+    menu.style.display = 'none'
+  }
 });
