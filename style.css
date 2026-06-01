@@ -28,19 +28,17 @@ a {
   position: relative;
   width: 100%;
   min-height: 520px;
-  background: linear-gradient(135deg, #e8e4dc 0%, #d6d0c4 50%, #c8c2b4 100%);
   border-radius: 0 0 24px 24px;
   display: flex;
   flex-direction: column;
   padding: 0;
 }
-
-.header img:first-child {
+.header img{
   height: 520px;
   border-radius: 0 0 24px 24px;
 }
 
-.header img:nth-child(2) {
+.ml img {
   position: absolute;
   top: 18px;
   left: 32px;
@@ -48,32 +46,32 @@ a {
   width: 90px;
 }
 
-.header li {
+.ml li {
   position: absolute;
   top: 50px;
 }
 
-.header li:nth-of-type(1) {
+.ml li:nth-of-type(1) {
   left: 180px;
 }
 
-.header li:nth-of-type(2) {
+.ml li:nth-of-type(2) {
   left: 270px;
 }
 
-.header li:nth-of-type(3) {
+.ml li:nth-of-type(3) {
   left: 370px;
 }
 
-.header li:nth-of-type(4) {
+.ml li:nth-of-type(4) {
   left: 490px;
 }
 
-.header li:nth-of-type(5) {
+.ml li:nth-of-type(5) {
   left: 570px;
 }
 
-.header i {
+.ml i {
   position: absolute;
   top: 14px;
   right: 32px;
@@ -81,7 +79,7 @@ a {
   font-size: 30px;
 }
 
-.header button {
+.ml button {
   position: absolute;
   top: 14px;
   right: 70px;
@@ -96,11 +94,11 @@ a {
   transition: 0.2s;
 }
 
-.header button:hover {
+.ml button:hover {
   background: #f0ede8;
 }
 
-.header h2 {
+.po h2 {
   position: absolute;
   top: 130px;
   left: 48px;
@@ -110,36 +108,36 @@ a {
   max-width: 420px;
 }
 
-.header>p {
+.po>p {
   position: absolute;
-  top: 260px;
-  left: 48px;
+  top: 50%;
+  left: 90px;
   font-size: 15px;
   color: #3a3a3a;
   max-width: 380px;
 }
 
-.vert {
+.vetr {
   position: absolute;
-  top: 310px;
+  top: 65%;
   left: 48px;
   background: #2f452c;
-  color: #fff;
   border-radius: 10px;
-  padding: 14px 28px;
+  padding: 0px;
   font-size: 15px;
-  font-weight: 600;
+  padding: 10px;
+  font-weight: 00;
   cursor: pointer;
   transition: 0.2s;
 }
 
-.vert p {
+.vetr p {
   color: #fff;
   font-size: 15px;
   margin: 0;
 }
 
-.vert:hover {
+.vetr:hover {
   background: #3d5c38;
 }
 
@@ -2410,91 +2408,118 @@ body h2 {
 
 
 
+/* Version téléphone */
+@media screen and (max-width:768px){
+
+    .header li{
+        display: none;
+    }
+
+    #signe{
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 2000;
+    }
+    
+/* ameliorer */
 
 
+/* Menu caché */
+#classe{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 250px;
+    height: 200px;
+    background: white;
+    transition: 0.3s;
+    padding-top: 80px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
+/* Quand le menu est ouvert */
+#classe.active{
+    right: 0;
+}
 
+/* Liens */
+#classe li{
+    list-style: none;
+    text-align: center;
+    margin: 20px 0;
+}
 
+#classe a{
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
 
+}
 
+/* PC */
+@media screen and (min-width:768px){
 
-
-/* MENU BURGER */
-@media screen and (min-width: 768px) {
-  .gra i {
-    display: none;
-  }
-
-  .header i {
-    display: none;
-  }
+    #signe{
+        display: none;
+    }
+    
+    #classe ul{
+        display: none;
+    }
+    #classe{
+        display: none;
+    }
 }
 
 
 
-/* VERSION MOBILE */
-/* icone cachés */
-@media screen and (max-width: 768px) {
 
-  /* cacher les liens */
-  .header li {
-    display: none;
-  }
+/* Téléphone */
+@media screen and (max-width:768px){
 
-  /* afficher burger */
-  .header i {
-    display: block;
-    font-size: 30px;
-    cursor: pointer;
-    color: white;
-  }
+    .menu-pc{
+        display: none;
+    }
 
-  #burger {
-    color: #000000;
-  }
+    #signe{
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 2000;
+    }
+    
+}
 
-  #croix {
-    color: #000000;
-  }
+/* PC */
+@media screen and (min-width:769px){
 
-  /* menu mobile */
-  .menu {
-    position: absolute;
-    top: 0px;
-    background: #ffffff;
-    width: 40%;
-    right: 0px;
-    display: none;
-    flex-direction: column;
-    height: 300px;
-    gap: 15px;
-  }
+    #signe{
+        display: none;
+    }
 
-  .menu li {
-    list-style: none;
-    height: 100%;
-  }
+    #classe{
+        display: none;
+    }
 
-  .menu a {
-    color: white;
-    text-decoration: none;
-  }
+    .menu-pc ul{
+        display: flex;
+        gap: 30px;
+        list-style: none;
+    }
 
-  /* menu actif */
-  .burger.active{
-    display: flex;
-    position: absolute;
-  }
-  .menu.active {
-    display: flex;
-    position: absolute;
-  }
-  /* menu non actif */
-  
-  .burger.desactive{
-    display: none;
-  }
-  .menu.desactive{
-    display: none;
-  }
+    .menu-pc a{
+        text-decoration: none;
+        color: black;
+    }
 }
